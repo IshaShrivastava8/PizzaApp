@@ -89,7 +89,7 @@ export default function Home() {
   </div>
 
 </TabsContent>
-  <TabsContent value="beverages" className="text-md">Beverages List</TabsContent>
+  <TabsContent value="beverages" className="text-md">
   <div className='grid grid-cols-4 gap-6 mt-6'>
   {
       products.map( product =>(
@@ -97,6 +97,7 @@ export default function Home() {
     )) }
 
   </div>
+  </TabsContent>
 </Tabs>
 </div>
 </section>
