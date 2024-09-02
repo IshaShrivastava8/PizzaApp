@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/custom/ui/dialog';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/custom/ui/radio-group';
 import { Label } from '@/components/ui/custom/ui/label';
+import ToppingsList from './toppings-list';
 
 
 export type Product = {
@@ -45,13 +46,11 @@ const ProductCard = ({product }:PropTypes) => {
         height={450}
         alt={product.name}     />
          </div>
-      <div className='w-2/3 p-8'>
+ <div className='w-2/3 p-8'>
        <h3 className='text-bold font-bold'>
         {product.name}
        </h3 >
-       <p className='mt-1'>
-        {product.description}
-       </p>
+       <p className='mt-1'>{product.description}</p>
        <div>
        <h4 className="mt-6">Choose the size</h4>
        <RadioGroup
@@ -119,7 +118,7 @@ const ProductCard = ({product }:PropTypes) => {
             </Label>
         </div>
 
-        <div>
+  <div>
             <RadioGroupItem
                 value="thick"
                 id="thick"
@@ -134,11 +133,9 @@ const ProductCard = ({product }:PropTypes) => {
         </div>
     </RadioGroup>
 </div>
-
-                  
-
-      </div>
-     </div>
+<ToppingsList/>
+</div>
+ </div>
   </DialogContent>
 </Dialog>
 
